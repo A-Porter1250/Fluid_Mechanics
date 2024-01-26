@@ -41,7 +41,7 @@ def force_due_to_gravity_on_a_fluid_element(pressure):
 # Hydrostatics
 # Sum of forces = 0
 
-def hydrostatic_pressure(atmospheric_pressure, density, height):
+def hydrostatic_pressure(atmospheric_pressure, density: float, height: float):
     return atmospheric_pressure + density * 9.81 * height
 
 def variable_hydrostatic_pressure(atmospheric_pressure, density: sp.Function, height):
@@ -58,6 +58,3 @@ class hydrostatic_fluid_parcel:
         return surface_pressure + self.density * 9.81 * height
     
     
-pressure_matrix = sp.Matrix([1 * x**2, 2 * y, 3 * z])
-answer = differential_force_due_to_pressure_on_a_fluid_parcel(pressure_matrix)
-print(answer)
