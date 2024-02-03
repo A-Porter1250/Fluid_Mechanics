@@ -12,6 +12,10 @@ gravity_vector = N.j * -9.81
 def density(mass, volume):
     return mass / volume
 
+
+
+
+
 def specific_density(density):
     # density of water = 1000 kg/m**3
     return density/1000
